@@ -4,7 +4,7 @@ from kiota_http.httpx_request_adapter import HttpxRequestAdapter
 from aps import OssClient, ModelDerivativeClient, ClientCredentialsAuthenticationProvider
 
 # Assuming APS_CLIENT_ID and APS_CLIENT_SECRET are set in environment variables
-adapter = HttpxRequestAdapter(ClientCredentialsAuthenticationProvider())
+adapter = HttpxRequestAdapter(ClientCredentialsAuthenticationProvider(scopes="bucket:read data:read"))
 oss_client = OssClient(adapter)
 model_derivative_client = ModelDerivativeClient(adapter)
 
