@@ -1,0 +1,3 @@
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1oss~1v2~1signedresources~1{hash}/put - The operation #/paths/~1oss~1v2~1signedresources~1{hash}/put has a request body which is not an object type. This is not supported by Kiota and serialization will fail.
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1oss~1v2~1signedresources~1{hash}~1resumable/put - The operation #/paths/~1oss~1v2~1signedresources~1{hash}~1resumable/put has a request body which is not an object type. This is not supported by Kiota and serialization will fail.
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1oss~1v2~1signedresources~1{hash}~1resumable/put - The operation describes multiple response schemas that are divergent. Only the schema of the lowest success status code will be used.

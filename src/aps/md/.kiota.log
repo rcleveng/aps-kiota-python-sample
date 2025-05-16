@@ -1,0 +1,3 @@
+Warning: KiotaBuilder OpenAPI warning: #/ - The schema JobPayloadFormat is a polymorphic type but does not define a discriminator. This will result in a serialization errors.
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1modelderivative~1v2~1designdata~1{urn}~1metadata~1{modelGuid}/get - The operation describes multiple response schemas that are divergent. Only the schema of the lowest success status code will be used.
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1modelderivative~1v2~1designdata~1{urn}~1metadata~1{modelGuid}~1properties/get - The operation describes multiple response schemas that are divergent. Only the schema of the lowest success status code will be used.

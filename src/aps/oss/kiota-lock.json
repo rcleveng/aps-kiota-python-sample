@@ -1,0 +1,34 @@
+{
+  "descriptionHash": "41C53F84A85C7A8DF58060CCE20BE55BD82B0529362706B44F54387BFC90FD32090DE5D86A64BD401C80281BBC7FF300EB220EB22A6C2BCF2981ED6D84192892",
+  "descriptionLocation": "https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/refs/heads/main/oss/oss.yaml",
+  "lockFileVersion": "1.0.0",
+  "kiotaVersion": "1.26.1",
+  "clientClassName": "OssClient",
+  "typeAccessModifier": "Public",
+  "clientNamespaceName": "ApiSdk",
+  "language": "Python",
+  "usesBackingStore": false,
+  "excludeBackwardCompatible": false,
+  "includeAdditionalData": true,
+  "disableSSLValidation": false,
+  "serializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Form.FormSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Multipart.MultipartSerializationWriterFactory"
+  ],
+  "deserializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Text.TextParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Form.FormParseNodeFactory"
+  ],
+  "structuredMimeTypes": [
+    "application/json",
+    "text/plain;q=0.9",
+    "application/x-www-form-urlencoded;q=0.2",
+    "multipart/form-data;q=0.1"
+  ],
+  "includePatterns": [],
+  "excludePatterns": [],
+  "disabledValidationRules": []
+}

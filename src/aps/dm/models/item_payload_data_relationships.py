@@ -1,0 +1,64 @@
+from __future__ import annotations
+from collections.abc import Callable
+from dataclasses import dataclass, field
+from kiota_abstractions.serialization import AdditionalDataHolder, Parsable, ParseNode, SerializationWriter
+from typing import Any, Optional, TYPE_CHECKING, Union
+
+if TYPE_CHECKING:
+    from .item_payload_data_relationships_parent import ItemPayload_data_relationships_parent
+    from .item_payload_data_relationships_tip import ItemPayload_data_relationships_tip
+
+@dataclass
+class ItemPayload_data_relationships(AdditionalDataHolder, Parsable):
+    """
+    A container of links to resources that are related to the item to be created.
+    """
+    # Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    additional_data: dict[str, Any] = field(default_factory=dict)
+
+    # Information about the parent of the new item in the folder hierarchy.
+    parent: Optional[ItemPayload_data_relationships_parent] = None
+    # Information about the first version of the new item, which will be its tip version.
+    tip: Optional[ItemPayload_data_relationships_tip] = None
+    
+    @staticmethod
+    def create_from_discriminator_value(parse_node: ParseNode) -> ItemPayload_data_relationships:
+        """
+        Creates a new instance of the appropriate class based on discriminator value
+        param parse_node: The parse node to use to read the discriminator value and create the object
+        Returns: ItemPayload_data_relationships
+        """
+        if parse_node is None:
+            raise TypeError("parse_node cannot be null.")
+        return ItemPayload_data_relationships()
+    
+    def get_field_deserializers(self,) -> dict[str, Callable[[ParseNode], None]]:
+        """
+        The deserialization information for the current model
+        Returns: dict[str, Callable[[ParseNode], None]]
+        """
+        from .item_payload_data_relationships_parent import ItemPayload_data_relationships_parent
+        from .item_payload_data_relationships_tip import ItemPayload_data_relationships_tip
+
+        from .item_payload_data_relationships_parent import ItemPayload_data_relationships_parent
+        from .item_payload_data_relationships_tip import ItemPayload_data_relationships_tip
+
+        fields: dict[str, Callable[[Any], None]] = {
+            "parent": lambda n : setattr(self, 'parent', n.get_object_value(ItemPayload_data_relationships_parent)),
+            "tip": lambda n : setattr(self, 'tip', n.get_object_value(ItemPayload_data_relationships_tip)),
+        }
+        return fields
+    
+    def serialize(self,writer: SerializationWriter) -> None:
+        """
+        Serializes information the current object
+        param writer: Serialization writer to use to serialize this model
+        Returns: None
+        """
+        if writer is None:
+            raise TypeError("writer cannot be null.")
+        writer.write_object_value("parent", self.parent)
+        writer.write_object_value("tip", self.tip)
+        writer.write_additional_data_value(self.additional_data)
+    
+
