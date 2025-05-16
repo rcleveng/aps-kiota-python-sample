@@ -2,23 +2,16 @@
 
 KIOTA_IMAGE="mcr.microsoft.com/openapi/kiota:1.26.1"
 KIOTA_ARGS="--language python"
+OPENAPI_BASE_URL="https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/09dfeb71fab0daf032cf1b343ef3dcac8ba1800c"
 
-docker run --volume ./src/aps/oss:/app/output \
-    $KIOTA_IMAGE generate $KIOTA_ARGS \
-        --openapi https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/refs/heads/main/oss/oss.yaml \
-        --class-name OssClient
+generate_sdk() {
+    local output_dir="$1"
+    local openapi_path="$2"
+    local class_name="$3"
+    docker run --volume "$output_dir":/app/output $KIOTA_IMAGE generate $KIOTA_ARGS --openapi "$OPENAPI_BASE_URL/$openapi_path" --class-name "$class_name"
+}
 
-docker run --volume ./src/aps/md:/app/output \
-    $KIOTA_IMAGE generate $KIOTA_ARGS \
-        --openapi https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/refs/heads/main/modelderivative/modelderivative.yaml \
-        --class-name ModelDerivativeClient
-
-docker run --volume ./src/aps/dm:/app/output \
-    $KIOTA_IMAGE generate $KIOTA_ARGS \
-        --openapi https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/refs/heads/main/datamanagement/datamanagement.yaml \
-        --class-name DataManagementClient
-
-docker run --volume ./src/aps/acc/issues:/app/output \
-    $KIOTA_IMAGE generate $KIOTA_ARGS \
-        --openapi https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/refs/heads/main/construction/issues/Issues.yaml \
-        --class-name IssuesClient
+generate_sdk "./src/aps/oss"        "oss/oss.yaml"                          "OssClient"
+generate_sdk "./src/aps/md"         "modelderivative/modelderivative.yaml"  "ModelDerivativeClient"
+generate_sdk "./src/aps/dm"         "datamanagement/datamanagement.yaml"    "DataManagementClient"
+generate_sdk "./src/aps/acc/issues" "construction/issues/Issues.yaml"       "IssuesClient"

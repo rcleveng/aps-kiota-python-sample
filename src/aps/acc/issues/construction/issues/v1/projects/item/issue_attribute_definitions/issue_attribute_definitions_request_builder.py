@@ -97,7 +97,7 @@ class IssueAttributeDefinitionsRequestBuilder(BaseRequestBuilder):
         filtercreated_at: Optional[str] = None
 
         # Retrieves issue custom attribute definitions with the specified data type. Possible values: list (this corresponds to dropdown in the UI), text, paragraph, numeric. For example, filter[dataType]=text,numeric.
-        filterdata_type: list[DataType] = []
+        filterdata_type: list[DataType] = field(default_factory=list)
 
         # Retrieves types that were deleted at the specified date and time, in one of the following URL-encoded formats: YYYY-MM-DDThh:mm:ss.sz or YYYY-MM-DD. Separate multiple values with commas. 
         filterdeleted_at: Optional[str] = None

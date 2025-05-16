@@ -103,7 +103,7 @@ class RefsRequestBuilder(BaseRequestBuilder):
         filterid: Optional[list[str]] = None
 
         # Filter by the ``type`` of the ``ref`` target. Supported values include ``folders``, ``items``, and ``versions``.
-        filtertype: list[Filter_type_version] = []
+        filtertype: list[Filter_type_version] = field(default_factory=list)
 
     
     @dataclass

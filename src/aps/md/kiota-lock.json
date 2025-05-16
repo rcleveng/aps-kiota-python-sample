@@ -1,6 +1,6 @@
 {
   "descriptionHash": "2052E99F5536652A46FA65EB007668D6FAD29BF98D187F2BB0B112FE2C564784F7875B728BFE6AF631CD19E32B0BFE2A2165E10C207CA6431986CD0C0877E7D6",
-  "descriptionLocation": "https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/refs/heads/main/modelderivative/modelderivative.yaml",
+  "descriptionLocation": "https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/09dfeb71fab0daf032cf1b343ef3dcac8ba1800c/modelderivative/modelderivative.yaml",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.26.1",
   "clientClassName": "ModelDerivativeClient",

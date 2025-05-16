@@ -1,6 +1,6 @@
 {
   "descriptionHash": "40C68A21B5901C05C3394853C960A7CBEF90CDDD3C5A10FF20949E059A435A878D14736D26684E9474E5AE16AF2697621D0DE5EE1C2E89FF5D4CAAF593246440",
-  "descriptionLocation": "https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/refs/heads/main/construction/issues/Issues.yaml",
+  "descriptionLocation": "https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/09dfeb71fab0daf032cf1b343ef3dcac8ba1800c/construction/issues/Issues.yaml",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.26.1",
   "clientClassName": "IssuesClient",

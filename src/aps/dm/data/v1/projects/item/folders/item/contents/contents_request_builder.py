@@ -117,7 +117,7 @@ class ContentsRequestBuilder(BaseRequestBuilder):
         filterlast_modified_time_rollup: Optional[list[str]] = None
 
         # Filter by the type of the objects in the folder. Supported values are ``folders`` and ``items``.
-        filtertype: list[Filter_type] = []
+        filtertype: list[Filter_type] = field(default_factory=list)
 
         # ``true``: Response will contain items and folders that were deleted from BIM 360 Docs projects. ``false``: (Default): Response will not contain items and folders that were deleted from BIM 360 Docs projects.  To return only items and folders that were deleted from BIM 360 Docs projects, see the documentation on [Filtering](/en/docs/data/v2/overview/filtering/).
         include_hidden: Optional[bool] = None

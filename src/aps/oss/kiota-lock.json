@@ -1,6 +1,6 @@
 {
   "descriptionHash": "41C53F84A85C7A8DF58060CCE20BE55BD82B0529362706B44F54387BFC90FD32090DE5D86A64BD401C80281BBC7FF300EB220EB22A6C2BCF2981ED6D84192892",
-  "descriptionLocation": "https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/refs/heads/main/oss/oss.yaml",
+  "descriptionLocation": "https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/09dfeb71fab0daf032cf1b343ef3dcac8ba1800c/oss/oss.yaml",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.26.1",
   "clientClassName": "OssClient",

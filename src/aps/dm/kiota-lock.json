@@ -1,6 +1,6 @@
 {
   "descriptionHash": "94BD4451B12636988083461FF6AC987111E3F8530119D1BEE2D2281D77CD49E67BB3C4CA68398E29C04DBE941A59B05A37583C043784E3BAD96596932EBE42C2",
-  "descriptionLocation": "https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/refs/heads/main/datamanagement/datamanagement.yaml",
+  "descriptionLocation": "https://raw.githubusercontent.com/autodesk-platform-services/aps-sdk-openapi/09dfeb71fab0daf032cf1b343ef3dcac8ba1800c/datamanagement/datamanagement.yaml",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.26.1",
   "clientClassName": "DataManagementClient",
