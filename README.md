@@ -33,12 +33,10 @@ Experimental Python project using [Microsoft Kiota](https://learn.microsoft.com/
 
 ### Python __future__ imports
 
-There's a bug in Kiota [#4600](https://github.com/microsoft/kiota/issues/4600) where in certain cases the auto-generated Python code includes `__future__` imports in the wrong place. For now this must be fixed manually by moving the `from __future__ import annotations` line to the top of the file.
-
-> The auto-generated code in this project has already been updated to fix this issue.
+There's a bug in Kiota [#4600](https://github.com/microsoft/kiota/issues/4600) where in certain cases the auto-generated Python code includes `__future__` imports in the wrong place. If you run into this issue, please make sure you are using [Kiota 1.27](https://github.com/microsoft/kiota/releases/tag/v1.27.0) or later of Kiota.
 
 ### Incorrect defaults for dataclass fields
 
-There's a bug in Kiota [#6350](https://github.com/microsoft/kiota/issues/6350) where in certain cases the auto-generated Python code uses `[]` as default value for a `@dataclass` field. For now this must be fixed manually by replacing `[]` with `field(default_factory=list)`. There is a PR [#6489](https://github.com/microsoft/kiota/pull/6489) addressing this issue, waiting to be merged.
+There's a bug in Kiota [#6350](https://github.com/microsoft/kiota/issues/6350) where in certain cases the auto-generated Python code uses `[]` as default value for a `@dataclass` field. For now this must be fixed manually by replacing `[]` with `field(default_factory=list)`. There is a PR [#6655](https://github.com/microsoft/kiota/pull/6655) addressing this issue and will be released in [Kiota 1.28](https://github.com/microsoft/kiota/milestone/43)
 
 > The auto-generated code in this project has already been updated to fix this issue.
